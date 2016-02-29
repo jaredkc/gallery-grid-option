@@ -4,30 +4,32 @@
 
 .gg-gallery {
 	list-style-type: none;
-	margin: 2em auto;
+	margin: 2em -1% 2em 0;
 	position: relative;
 	padding: 0;
-	width: 100%;
+	width: 101%;
 	max-width: 1200px;
 }
 
-/* Hide inconsistent pixel rounding. */
-.gg-gallery:after {
-	background-color: #fff;
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 1px;
-	height: 100%;
-}
+.gg-gallery::before,
+.gg-gallery::after {
+  content: ' ';
+  display: table; }
+
+.gg-gallery::after {
+  clear: both; }
 
 .gg-masonry,
 .gg-sizer {
 	float: left;
 	margin-bottom: 1%;
+	margin-right: 1%;
 	padding: 0;
-	width: 49.5%;
+	width: 49%;
+}
+
+.gg-sizer {
+	height: 1px;
 }
 
 .gg-masonry img {
@@ -36,7 +38,7 @@
 }
 
 .gg-masonry.gg-size-lg {
-	width: 100%;
+	width: 99%;
 }
 
 .gg-gutter {
