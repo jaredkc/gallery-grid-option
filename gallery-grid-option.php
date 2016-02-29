@@ -124,12 +124,12 @@ function gg_scripts() {
 	);
 
 	wp_enqueue_script(
-		'imagesloaded',
+		'gg-imagesloaded',
 		plugins_url( 'js/imagesloaded.pkgd.min.js', __FILE__ )
 	);
 
 	wp_enqueue_script(
-		'masonry',
+		'gg-masonry',
 		plugins_url( 'js/masonry.pkgd.min.js', __FILE__ )
 	);
 
