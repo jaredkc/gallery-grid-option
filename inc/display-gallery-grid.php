@@ -17,7 +17,7 @@ function print_gallery_grid($string, $attr) {
 		'orderby' => 'post__in'
 	));
 
-	$output = '<ul class="gg-gallery"><li class="gg-sizer"></li><li class="gg-gutter"></li>';
+	$output = '<ul class="gg-gallery">';
 
 	foreach($images as $imagePost) {
 		$size = get_post_meta( $imagePost->ID, '_grid_image_size', true );
@@ -30,7 +30,7 @@ function print_gallery_grid($string, $attr) {
 		$output .= '</li>';
 	}
 
-	$output .= '</ul><!-- .gg-gallery -->';
+	$output .= '<li class="gg-sizer"></li><li class="gg-gutter"></li></ul><!-- .gg-gallery -->';
 
 	return $output;
 }
