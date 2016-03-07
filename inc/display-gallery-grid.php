@@ -11,13 +11,18 @@ function print_gallery_grid($string, $attr) {
 		return;
 	}
 
+	$columns = '3';
+	if ( isset( $attr['columns'] ) ) {
+		$columns = $attr['columns'];
+	}
+
 	$images = get_posts(array(
 		'include' => $attr['ids'],
 		'post_type' => 'attachment',
 		'orderby' => 'post__in'
 	));
 
-	$output = '<ul class="gg-gallery">';
+	$output = '<ul class="gg-gallery gg-gallery-col'. $columns .'">';
 
 	foreach($images as $imagePost) {
 		$size = get_post_meta( $imagePost->ID, '_grid_image_size', true );

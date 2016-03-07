@@ -14,7 +14,9 @@ function image_size_field( $form_fields, $post ) {
 	// Set up options
 	$options = array(
 		'gg-size-sm' => 'Small',
+		'gg-size-md' => 'Medium',
 		'gg-size-lg' => 'Large',
+		'gg-size-xl' => 'X-Large',
 	);
 
 	// Get currently selected value
@@ -29,7 +31,7 @@ function image_size_field( $form_fields, $post ) {
 			$checked = " checked='checked'";
 		}
 
-		$html  = "<span class='image-include-option' style='margin-right:5px;'>";
+		$html  = "<span class='image-include-option' style='display: block;'>";
 		$html .= "<input type='radio' name='attachments[$post->ID][grid-image-include]' id='{$css_id}' value='{$value}'$checked />";
 		$html .= "<label for='{$css_id}' style='display:inline-block; margin:8px 0 0 3px;'>$label</label>";
 		$html .= '</span>';
@@ -39,7 +41,7 @@ function image_size_field( $form_fields, $post ) {
 
 	// Construct the form field
 	$form_fields['grid-include-image'] = array(
-		'label' => 'Grid Display Size',
+		'label' => 'Display Size',
 		'input' => 'html',
 		'html'  => join("\n", $out),
 	);

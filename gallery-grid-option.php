@@ -94,8 +94,8 @@ class Gallery_Grid_Option {
 					<?php
 
 					$styles = apply_filters( 'image_style_names_choose', array(
-						'default'   => __( 'Default' ),
-						'grid'      => __( 'Grid' ),
+						'default' => __( 'Default' ),
+						'grid'    => __( 'Grid' ),
 					) );
 
 					foreach ( $styles as $value => $name ) { ?>
@@ -105,7 +105,7 @@ class Gallery_Grid_Option {
 					<?php } ?>
 				</select>
 			</label>
-			<small>Note: This setting over rides columns and image size.</small>
+			<small>Note: Masonry style gallery grid option only works with 2, 3, or 4 column grids. Any other column setting will default to 2 column grids. Use the "Display Size" option for each image to build your gallery. The "Default" style option will inherit your themes display for WP galleries.</small>
 		</script>
 		<?php
 	}
