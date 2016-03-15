@@ -30,6 +30,7 @@
 
 .gg-masonry img {
 	width: 100%;
+	height: auto;
 	transition: width 0.4s, height 0.4s;
 }
 
